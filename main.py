@@ -35,6 +35,8 @@ def setData():
     f.close()
 
 def renderData():
+    global canvas
+    canvas.delete("all")
     buildBorder()
     colorItems()
     buildKey()
@@ -177,4 +179,6 @@ title.pack(side=tk.TOP)
 inputArea.pack(side=tk.TOP)
 submitButton.pack(side=tk.TOP)
 displayArea.pack(side=tk.TOP)
+if os.path.isfile(path="saveData"):
+    renderData()
 root.mainloop()
