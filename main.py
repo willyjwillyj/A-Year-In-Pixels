@@ -2,7 +2,7 @@ import tkinter as tk
 import pickle
 import os
 
-root = tk.Tk()
+root = tk.Tk(className="a year in pixels")
 root.geometry("1200x900")
 def processInput():
     setData()
